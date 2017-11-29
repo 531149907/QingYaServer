@@ -9,7 +9,7 @@ public class AppInfoService {
     @Autowired
     AppInfoMapper appInfoMapper;
 
-    public String getAggreement(){
+    public String getAggreement() {
         return appInfoMapper.getAppInfo().getAgreement();
     }
 }

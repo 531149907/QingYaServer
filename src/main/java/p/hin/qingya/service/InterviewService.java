@@ -12,15 +12,15 @@ public class InterviewService {
     @Autowired
     InterviewMapper interviewMapper;
 
-    List<Interview> getInterviews(){
+    List<Interview> getInterviews() {
         return interviewMapper.getInterviews();
     }
 
-    Interview getIntervewById(int id){
+    Interview getIntervewById(int id) {
         return interviewMapper.getInterview(id);
     }
 
-    List<Interview> searchInterviewsByKeyword(String keyword){
+    List<Interview> searchInterviewsByKeyword(String keyword) {
         return interviewMapper.getInterviews(keyword);
     }
 }

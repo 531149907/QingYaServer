@@ -12,15 +12,15 @@ public class ArticleService {
     @Autowired
     ArticleMapper articleMapper;
 
-    public List<Article> getArticlesByType(int type){
+    public List<Article> getArticlesByType(int type) {
         return articleMapper.getArticles(type);
     }
 
-    public List<Article> searchArticlesByKeyword(String keyword){
+    public List<Article> searchArticlesByKeyword(String keyword) {
         return articleMapper.getArticles(keyword);
     }
 
-    public Article getArticleById(int id){
+    public Article getArticleById(int id) {
         return articleMapper.getArticle(id);
     }
 

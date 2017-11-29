@@ -2,7 +2,7 @@ package p.hin.qingya.entity;
 
 import java.io.Serializable;
 
-public class AppInfo implements Serializable{
+public class AppInfo implements Serializable {
     private String agreement;
     private String version;
     private String updateSrc;

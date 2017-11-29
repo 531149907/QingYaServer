@@ -2,7 +2,7 @@ package p.hin.qingya.entity;
 
 import java.io.Serializable;
 
-public class Interview implements Serializable{
+public class Interview implements Serializable {
     private int id;
     private int type;
     private String title;
