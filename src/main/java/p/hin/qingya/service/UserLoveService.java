@@ -11,15 +11,15 @@ public class UserLoveService {
     @Autowired
     UserLoveService userLoveService;
 
-    List<UserLove> getUserLovesByUserId(int userId) {
+    public List<UserLove> getUserLovesByUserId(int userId) {
         return userLoveService.getUserLovesByUserId(userId);
     }
 
-    void addUserLove(UserLove userLove) {
+    public void addUserLove(UserLove userLove) {
         userLoveService.addUserLove(userLove);
     }
 
-    void deleteUserLoveById(int id) {
+    public void deleteUserLoveById(int id) {
         userLoveService.deleteUserLoveById(id);
     }
 }

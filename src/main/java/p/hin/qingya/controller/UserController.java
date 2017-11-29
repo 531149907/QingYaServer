@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import p.hin.qingya.entity.User;
 import p.hin.qingya.service.UserService;
 
 @RestController
@@ -29,5 +30,30 @@ public class UserController {
         return service.checkCombination(email, password);
     }
 
-    @
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    User loginUser(User user) {
+        return service.getUser(user.getEmail(), user.getPassword());
+    }
+
+    @RequestMapping(value = "register", method = RequestMethod.POST)
+    User registerUser(User user) {
+        service.addNewUser(user);
+        return service.getUser(user.getEmail(), user.getPassword());
+    }
+
+    @RequestMapping(value = "update/password", method = RequestMethod.POST)
+    void updatePassword(int id, String password) {
+        service.updateUserPassword(id, password);
+    }
+
+    @RequestMapping(value = "update/signature", method = RequestMethod.POST)
+    void updateSignature(int id, String signature) {
+        service.updateUserSignature(id, signature);
+    }
+
+    @RequestMapping(value = "update/username", method = RequestMethod.POST)
+    User updateUsername(int id, String username) {
+        service.updateUserUsername(id, username);
+        return service.getUser(id);
+    }
 }

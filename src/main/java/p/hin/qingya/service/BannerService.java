@@ -12,7 +12,7 @@ public class BannerService {
     @Autowired
     BannerMapper bannerMapper;
 
-    List<Banner> getBanners() {
+    public List<Banner> getBanners() {
         return bannerMapper.getBanners();
     }
 }

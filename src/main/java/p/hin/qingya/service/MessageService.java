@@ -12,11 +12,11 @@ public class MessageService {
     @Autowired
     MessageMapper messageMapper;
 
-    List<Message> getMessages() {
+    public List<Message> getMessages() {
         return messageMapper.getMessages();
     }
 
-    Message getMessageById(int id) {
+    public Message getMessageById(int id) {
         return messageMapper.getMessage(id);
     }
 }

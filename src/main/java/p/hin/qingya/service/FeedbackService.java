@@ -10,7 +10,7 @@ public class FeedbackService {
     @Autowired
     FeedbackMapper feedbackMapper;
 
-    void addNewFeedback(Feedback feedback) {
+    public void addNewFeedback(Feedback feedback) {
         feedbackMapper.insertFeedback(feedback);
     }
 }
